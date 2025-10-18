@@ -7,9 +7,55 @@ const postsGrid = document.getElementById('postsGrid');
 
 let selectedTags = new Set();
 
+// Fonctions pour gérer les paramètres URL
+function getUrlParams() {
+  const urlParams = new URLSearchParams(window.location.search);
+  return {
+    search: urlParams.get('search') || '',
+    tags: urlParams.get('tags') ? urlParams.get('tags').split(',') : []
+  };
+}
+
+function updateUrlParams() {
+  const url = new URL(window.location);
+  const params = new URLSearchParams();
+  
+  if (searchInput.value.trim()) {
+    params.set('search', searchInput.value.trim());
+  }
+  
+  if (selectedTags.size > 0) {
+    params.set('tags', Array.from(selectedTags).join(','));
+  }
+  
+  // Mettre à jour l'URL sans recharger la page
+  const newUrl = params.toString() ? `${url.pathname}?${params.toString()}` : url.pathname;
+  window.history.replaceState({}, '', newUrl);
+}
+
 function init() {
+  // Charger les paramètres URL au démarrage
+  const urlParams = getUrlParams();
+  
+  // Appliquer les paramètres de recherche
+  if (urlParams.search) {
+    searchInput.value = urlParams.search;
+  }
+  
+  // Appliquer les paramètres de tags
+  if (urlParams.tags.length > 0) {
+    urlParams.tags.forEach(tag => selectedTags.add(tag));
+    updateSelectedTagsUI();
+  }
+
   renderTagsDropdown();
-  renderPosts(posts);
+  
+  // Appliquer les filtres si des paramètres URL sont présents
+  if (urlParams.search || urlParams.tags.length > 0) {
+    updateFilter();
+  } else {
+    renderPosts(posts);
+  }
 
   tagsFilterInput.addEventListener('input', () => {
   filterTagsDropdown();
@@ -185,7 +231,13 @@ function updateFilter() {
         post.tags.join(' ').toLowerCase(),
       ].join(' ');
 
-      if (!haystack.includes(searchTerm)) return false;
+      // Support pour recherche multi-mots avec + ou espace
+      const searchWords = searchTerm.split(/[\s+]+/).filter(word => word.length > 0);
+      
+      // Tous les mots doivent être présents dans le haystack
+      const allWordsFound = searchWords.every(word => haystack.includes(word));
+      
+      if (!allWordsFound) return false;
     }
 
     return true;
@@ -201,6 +253,9 @@ function updateFilter() {
   setTimeout(() => {
     renderPosts(filteredPosts);
   }, 300);
+  
+  // Mettre à jour l'URL avec les paramètres actuels
+  updateUrlParams();
 }
 
 function renderPosts(postsToRender) {

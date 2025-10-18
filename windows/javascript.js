@@ -525,26 +525,6 @@ function updateSelectedTagsUI() {
   });
 }
 
-// Fonction de recherche exacte par titre
-function exactTitleSearch(searchTerm, post) {
-  if (!searchTerm) return { score: 0, matches: [] };
-  
-  const searchLower = searchTerm.toLowerCase().trim();
-  const titleLower = post.title.toLowerCase().trim();
-  
-  // Correspondance exacte du titre
-  if (titleLower === searchLower) {
-    return { score: 100, matches: ['title'] };
-  }
-  
-  // Correspondance exacte avec version (ex: "Boris FX Sapphire 2025.5")
-  const titleWithoutVersion = titleLower.replace(/\s+\d{4}\.\d+\.?\d*$/, '');
-  if (titleWithoutVersion === searchLower) {
-    return { score: 95, matches: ['title'] };
-  }
-  
-  return { score: 0, matches: [] };
-}
 
 // Fonction de recherche classique (comme avant)
 function classicSearch(searchTerm, post) {
@@ -567,20 +547,97 @@ function classicSearch(searchTerm, post) {
   return allWordsFound;
 }
 
-// Liste des titres exacts recherchés
-const exactTitles = [
-  'Boris FX Sapphire',
-  'Boris FX BCC', 
-  'Maxon Red Giant',
-  'Maxon Universe',
-  'Video Copilot All Plugin',
-  'Deep Glow',
-  'ReVisionFX',
-  'ReVisionFX All Plugins',
-  'Flow',
-  'EasyLayer',
-  'EasyLayers by LankyLucius'
-];
+// Système de correspondance intelligente pour les titres (amélioré)
+function findMatchingPost(searchTitle, posts) {
+  const searchLower = searchTitle.toLowerCase().trim();
+  
+  // 1. Correspondance exacte
+  let match = posts.find(post => post.title.toLowerCase() === searchLower);
+  if (match) return match;
+  
+  // 2. Correspondance sans version (ex: "Boris FX Sapphire 2025.5" -> "Boris FX Sapphire")
+  const titleWithoutVersion = searchLower.replace(/\s+\d{4}\.\d+\.?\d*$/, '');
+  match = posts.find(post => {
+    const postTitleWithoutVersion = post.title.toLowerCase().replace(/\s+\d{4}\.\d+\.?\d*$/, '');
+    return postTitleWithoutVersion === titleWithoutVersion;
+  });
+  if (match) return match;
+  
+  // 3. Correspondance par mots entiers (plus précis)
+  const searchWords = searchLower.split(/\s+/).filter(word => word.length > 1);
+  match = posts.find(post => {
+    const postTitle = post.title.toLowerCase();
+    const postWords = postTitle.split(/\s+/).filter(word => word.length > 1);
+    
+    // Filtrer les mots vides
+    const importantWords = searchWords.filter(word => 
+      !['the', 'and', 'or', 'for', 'with', 'by', 'in', 'on', 'at', 'to', 'v2', 'v3', 'v4', 'v5'].includes(word)
+    );
+    
+    if (importantWords.length === 0) return false;
+    
+    // Vérifier que tous les mots importants sont présents comme mots entiers
+    return importantWords.every(searchWord => 
+      postWords.some(postWord => {
+        // Correspondance exacte de mot entier
+        if (postWord === searchWord) return true;
+        // Correspondance sans version (ex: "flow" correspond à "flow v2")
+        const postWordWithoutVersion = postWord.replace(/v\d+$/, '');
+        return postWordWithoutVersion === searchWord;
+      })
+    );
+  });
+  if (match) return match;
+  
+  // 4. Correspondance par similarité (seulement si très proche)
+  match = posts.find(post => {
+    const postTitle = post.title.toLowerCase();
+    const similarity = calculateSimilarity(searchLower, postTitle);
+    return similarity > 0.9; // 90% de similarité minimum (plus strict)
+  });
+  
+  return match;
+}
+
+// Calcul de similarité simple entre deux chaînes
+function calculateSimilarity(str1, str2) {
+  const longer = str1.length > str2.length ? str1 : str2;
+  const shorter = str1.length > str2.length ? str2 : str1;
+  
+  if (longer.length === 0) return 1.0;
+  
+  const distance = levenshteinDistance(longer, shorter);
+  return (longer.length - distance) / longer.length;
+}
+
+// Distance de Levenshtein simplifiée
+function levenshteinDistance(str1, str2) {
+  const matrix = [];
+  
+  for (let i = 0; i <= str2.length; i++) {
+    matrix[i] = [i];
+  }
+  
+  for (let j = 0; j <= str1.length; j++) {
+    matrix[0][j] = j;
+  }
+  
+  for (let i = 1; i <= str2.length; i++) {
+    for (let j = 1; j <= str1.length; j++) {
+      if (str2.charAt(i - 1) === str1.charAt(j - 1)) {
+        matrix[i][j] = matrix[i - 1][j - 1];
+      } else {
+        matrix[i][j] = Math.min(
+          matrix[i - 1][j - 1] + 1,
+          matrix[i][j - 1] + 1,
+          matrix[i - 1][j] + 1
+        );
+      }
+    }
+  }
+  
+  return matrix[str2.length][str1.length];
+}
 
 // Détecter si c'est une recherche exacte (uniquement avec +)
 function isExactSearch(searchTerm) {
@@ -589,24 +646,24 @@ function isExactSearch(searchTerm) {
   // Vérifier si c'est plusieurs titres séparés par +
   const titles = searchLower.split('+').map(t => t.trim()).filter(t => t.length > 0);
   if (titles.length > 1) {
-    // Vérifier si tous les titres sont des titres exacts
-    return titles.every(title => exactTitles.some(exactTitle => exactTitle.toLowerCase() === title));
+    // Vérifier si au moins un titre peut être trouvé dans les posts
+    return titles.some(title => findMatchingPost(title, posts) !== undefined);
   }
   
   // Si pas de +, utiliser la recherche classique
   return false;
 }
 
-// Fonction de recherche pour plusieurs titres exacts
+// Fonction de recherche intelligente pour plusieurs titres
 function multiExactSearch(searchTerm, post) {
   const searchLower = searchTerm.toLowerCase().trim();
   const titles = searchLower.split('+').map(t => t.trim()).filter(t => t.length > 0);
   
   // Vérifier si le post correspond à l'un des titres recherchés
   for (const title of titles) {
-    const exactResult = exactTitleSearch(title, post);
-    if (exactResult.score > 0) {
-      return { score: exactResult.score, matches: exactResult.matches, matchedTitle: title };
+    const match = findMatchingPost(title, [post]);
+    if (match) {
+      return { score: 100, matches: ['title'], matchedTitle: title };
     }
   }
   
