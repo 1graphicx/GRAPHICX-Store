@@ -205,6 +205,47 @@ document.head.insertAdjacentHTML('beforeend', animationStyles);
 
 let selectedTags = new Set();
 
+// Fonctions pour gérer les paramètres URL
+function getUrlParams() {
+  const urlParams = new URLSearchParams(window.location.search);
+  return {
+    search: urlParams.get('search') || '',
+    tags: urlParams.get('tags') ? urlParams.get('tags').split(',') : []
+  };
+}
+
+function updateUrlParams() {
+  const url = new URL(window.location);
+  const params = new URLSearchParams();
+  
+  if (searchInput.value.trim()) {
+    params.set('search', searchInput.value.trim());
+  }
+  
+  if (selectedTags.size > 0) {
+    params.set('tags', Array.from(selectedTags).join(','));
+  }
+  
+  // Mettre à jour l'URL sans recharger la page
+  const newUrl = params.toString() ? `${url.pathname}?${params.toString()}` : url.pathname;
+  window.history.replaceState({}, '', newUrl);
+}
+
+// Fonction pour générer des suggestions de recherche (désactivée)
+function generateSearchSuggestions(searchTerm) {
+  return [];
+}
+
+// Afficher les suggestions de recherche (désactivée)
+function showSearchSuggestions(suggestions) {
+  searchSuggestions.classList.remove('show');
+}
+
+// Afficher les statistiques de recherche (désactivée)
+function showSearchStats(filteredPosts, searchTerm) {
+  searchStats.classList.remove('show');
+}
+
 // Fonction pour ajouter l'effet de particules au hover
 function addParticleEffect() {
   const cards = document.querySelectorAll('.post-card');
@@ -220,6 +261,20 @@ function addParticleEffect() {
 }
 
 function init() {
+  // Charger les paramètres URL au démarrage
+  const urlParams = getUrlParams();
+  
+  // Appliquer les paramètres de recherche
+  if (urlParams.search) {
+    searchInput.value = urlParams.search;
+  }
+  
+  // Appliquer les paramètres de tags
+  if (urlParams.tags.length > 0) {
+    urlParams.tags.forEach(tag => selectedTags.add(tag));
+    updateSelectedTagsUI();
+  }
+
   // Animation de chargement initial
   postsGrid.innerHTML = `
     <div class="loading-state" style="
@@ -256,7 +311,13 @@ function init() {
   // Charger les éléments avec un délai réduit pour l'animation
   setTimeout(() => {
     renderTagsDropdown();
-    renderPosts(posts);
+    
+    // Appliquer les filtres si des paramètres URL sont présents
+    if (urlParams.search || urlParams.tags.length > 0) {
+      updateFilter();
+    } else {
+      renderPosts(posts);
+    }
   }, 400); // Réduit de 800ms à 400ms
 
   // Gestion unifiée de l'input de filtrage des tags
@@ -330,6 +391,14 @@ function init() {
       updateFilter();
     }, 150); // Réduit de 300ms à 150ms
   });
+
+  // Gestion des événements clavier pour les suggestions
+  searchInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      searchInput.blur();
+    }
+  });
+
   
   // Animation au focus des inputs
   [searchInput, tagsFilterInput].forEach(input => {
@@ -456,33 +525,143 @@ function updateSelectedTagsUI() {
   });
 }
 
+// Fonction de recherche exacte par titre
+function exactTitleSearch(searchTerm, post) {
+  if (!searchTerm) return { score: 0, matches: [] };
+  
+  const searchLower = searchTerm.toLowerCase().trim();
+  const titleLower = post.title.toLowerCase().trim();
+  
+  // Correspondance exacte du titre
+  if (titleLower === searchLower) {
+    return { score: 100, matches: ['title'] };
+  }
+  
+  // Correspondance exacte avec version (ex: "Boris FX Sapphire 2025.5")
+  const titleWithoutVersion = titleLower.replace(/\s+\d{4}\.\d+\.?\d*$/, '');
+  if (titleWithoutVersion === searchLower) {
+    return { score: 95, matches: ['title'] };
+  }
+  
+  return { score: 0, matches: [] };
+}
+
+// Fonction de recherche classique (comme avant)
+function classicSearch(searchTerm, post) {
+  if (!searchTerm) return false;
+  
+  const searchLower = searchTerm.toLowerCase();
+  const haystack = [
+    post.title.toLowerCase(),
+    post.information ? post.information.toLowerCase() : '',
+    post.description.toLowerCase(),
+    post.tags.join(' ').toLowerCase(),
+  ].join(' ');
+
+  // Support pour recherche multi-mots avec + ou espace
+  const searchWords = searchLower.split(/[\s+]+/).filter(word => word.length > 0);
+  
+  // Tous les mots doivent être présents dans le haystack
+  const allWordsFound = searchWords.every(word => haystack.includes(word));
+  
+  return allWordsFound;
+}
+
+// Liste des titres exacts recherchés
+const exactTitles = [
+  'Boris FX Sapphire',
+  'Boris FX BCC', 
+  'Maxon Red Giant',
+  'Maxon Universe',
+  'Video Copilot All Plugin',
+  'Deep Glow',
+  'ReVisionFX',
+  'ReVisionFX All Plugins',
+  'Flow',
+  'EasyLayer',
+  'EasyLayers by LankyLucius'
+];
+
+// Détecter si c'est une recherche exacte (uniquement avec +)
+function isExactSearch(searchTerm) {
+  const searchLower = searchTerm.toLowerCase().trim();
+  
+  // Vérifier si c'est plusieurs titres séparés par +
+  const titles = searchLower.split('+').map(t => t.trim()).filter(t => t.length > 0);
+  if (titles.length > 1) {
+    // Vérifier si tous les titres sont des titres exacts
+    return titles.every(title => exactTitles.some(exactTitle => exactTitle.toLowerCase() === title));
+  }
+  
+  // Si pas de +, utiliser la recherche classique
+  return false;
+}
+
+// Fonction de recherche pour plusieurs titres exacts
+function multiExactSearch(searchTerm, post) {
+  const searchLower = searchTerm.toLowerCase().trim();
+  const titles = searchLower.split('+').map(t => t.trim()).filter(t => t.length > 0);
+  
+  // Vérifier si le post correspond à l'un des titres recherchés
+  for (const title of titles) {
+    const exactResult = exactTitleSearch(title, post);
+    if (exactResult.score > 0) {
+      return { score: exactResult.score, matches: exactResult.matches, matchedTitle: title };
+    }
+  }
+  
+  return { score: 0, matches: [] };
+}
+
 // Applique le filtre combiné recherche + tags sélectionnés
 function updateFilter() {
-  const searchTerm = searchInput.value.trim().toLowerCase();
-
+  const searchTerm = searchInput.value.trim();
+  
+  
   let filteredPosts = posts.filter(post => {
     // Filtre par tags sélectionnés : tous doivent être présents
     if (selectedTags.size > 0) {
       const hasAllTags = [...selectedTags].every(t => post.tags.includes(t));
       if (!hasAllTags) return false;
     }
-
-    // Filtre recherche texte sur title, description, tags, version
+    
+    // Filtre recherche texte
     if (searchTerm.length > 0) {
-      const haystack = [
-        post.title.toLowerCase(),
-        post.information ? post.information.toLowerCase() : '',
-        post.description.toLowerCase(),
-        post.tags.join(' ').toLowerCase(),
-      ].join(' ');
-
-      if (!haystack.includes(searchTerm)) return false;
+      // Si c'est une recherche exacte (avec +), utiliser la fonction appropriée
+      if (isExactSearch(searchTerm)) {
+        // Recherche multi-titres
+        const multiResult = multiExactSearch(searchTerm, post);
+        return multiResult.score > 0;
+      } else {
+        // Sinon, utiliser la recherche classique
+        return classicSearch(searchTerm, post);
+      }
     }
-
+    
     return true;
   });
+  
+  // Trier par correspondance exacte si recherche active
+  if (searchTerm.length > 0 && isExactSearch(searchTerm)) {
+    filteredPosts = filteredPosts.map(post => {
+      const multiResult = multiExactSearch(searchTerm, post);
+      return {
+        ...post,
+        isExactMatch: multiResult.score > 0,
+        matchedTitle: multiResult.matchedTitle || null
+      };
+    }).sort((a, b) => {
+      // Trier par correspondance exacte d'abord, puis par ordre alphabétique
+      if (a.isExactMatch && !b.isExactMatch) return -1;
+      if (!a.isExactMatch && b.isExactMatch) return 1;
+      return a.title.localeCompare(b.title);
+    });
+  }
 
   renderPosts(filteredPosts);
+  
+  // Mettre à jour l'URL avec les paramètres actuels
+  updateUrlParams();
 }
 
 function renderPosts(postsToRender) {
@@ -526,14 +705,15 @@ function renderPostsContent(postsToRender) {
   const fragment = document.createDocumentFragment();
   
   postsToRender.forEach((post, index) => {
-    const postCard = document.createElement('div');
-    postCard.className = 'post-card';
-    postCard.tabIndex = 0;
-    postCard.setAttribute('aria-label', `Post ${post.title}`);
-    
-    // Délai d'animation réduit et optimisé
-    const animationDelay = Math.min(index * 0.03, 0.3); // Max 0.3s de délai
-    postCard.style.animationDelay = `${animationDelay}s`;
+      const postCard = document.createElement('div');
+      postCard.className = 'post-card';
+      postCard.tabIndex = 0;
+      postCard.setAttribute('aria-label', `Post ${post.title}`);
+      
+      // Délai d'animation réduit et optimisé
+      const animationDelay = Math.min(index * 0.03, 0.3); // Max 0.3s de délai
+      postCard.style.animationDelay = `${animationDelay}s`;
+
 
       // Image du post avec animation de chargement
       const imageDiv = document.createElement('div');
@@ -555,6 +735,7 @@ function renderPostsContent(postsToRender) {
       const title = document.createElement('h3');
       title.className = 'post-title';
       title.textContent = post.title;
+      
       title.style.animationDelay = `${index * 0.1 + 0.2}s`;
 
       // Description avec animation
