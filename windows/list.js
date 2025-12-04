@@ -579,6 +579,104 @@ const posts = [
       size: "2 MB"
     },
     {
+      "title": "FastFX",
+      "information": "Leaked by https://t.me/dadksy_leaks/",
+      "version": "1.0.0",
+      "description": "Extension pour Premiere Pro",
+      "thumbnail": "assets/images/extension_logo.png",
+      "tags": ["Premiere Pro", "Extensions"],
+      "file": "https://drive.google.com/uc?export=download&id=1Zyfz_eGWx8nqzd9wLkKZF1EOjY-M6lBh",
+      "size": "155 MB"
+    },
+    {
+      "title": "FredPelle HalationPR",
+      "information": "Leaked by https://t.me/dadksy_leaks/",
+      "version": "1.0.0",
+      "description": "Extension pour After Effects et Premiere Pro",
+      "thumbnail": "assets/images/fredpelle_halation.webp",
+      "tags": ["After Effects", "Premiere Pro", "Extensions", "FredPelle"],
+      "file": "https://drive.google.com/uc?export=download&id=1FRA29ZiJJDLMsRtaoH3ZwkjO7wkvZzT_",
+      "size": "8.8 MB"
+    },
+    {
+      "title": "FredPelle LoFi",
+      "version": "1.0.0",
+      "description": "Extension pour After Effects",
+      "thumbnail": "assets/images/fredpelle_lofi.webp",
+      "tags": ["After Effects", "Extensions", "FredPelle"],
+      "file": "https://drive.google.com/uc?export=download&id=1jt9D_RK7YDlEFFsELn5YPxNre_cQjK3g",
+      "size": "78 MB"
+    },
+    {
+      "title": "FredPelle Matrix",
+      "information": "Leaked by https://t.me/dadksy_leaks/",
+      "version": "1.0.0",
+      "description": "Extension pour After Effects",
+      "thumbnail": "assets/images/fredpelle_matrix.webp",
+      "tags": ["After Effects", "Extensions", "FredPelle"],
+      "file": "https://drive.google.com/uc?export=download&id=1NfleQX41V1f-_7v5K41NWF6Q8nl5msyP",
+      "size": "2.5 MB"
+    },
+    {
+      "title": "FredPelle MXM",
+      "version": "1.0.1",
+      "description": "Extension pour After Effects",
+      "thumbnail": "assets/images/fredpelle_mxm.webp",
+      "tags": ["After Effects", "Extensions", "FredPelle"],
+      "file": "https://drive.google.com/uc?export=download&id=1WNRsYippJp6UidTwr_iWPjTGHDfWNapX",
+      "size": "412 MB"
+    },
+    {
+      "title": "FredPelle Rollback8",
+      "information": "Leaked by https://t.me/dadksy_leaks/",
+      "version": "2.0.0",
+      "description": "Extension pour After Effects",
+      "thumbnail": "assets/images/fredpelle_rollback8.webp",
+      "tags": ["After Effects", "Extensions", "FredPelle"],
+      "file": "https://drive.google.com/uc?export=download&id=1qkz8GjwMFZq6rcbK4K8FMfq8e1ZtFLGf",
+      "size": "826 MB"
+    },
+    {
+      "title": "FredPelle Spectrum",
+      "information": "Leaked by https://t.me/dadksy_leaks/",
+      "version": "1.0.2",
+      "description": "Extension pour After Effects",
+      "thumbnail": "assets/images/fredpelle_spectrum.webp",
+      "tags": ["After Effects", "Extensions", "FredPelle"],
+      "file": "https://drive.google.com/uc?export=download&id=1BQvMUKWAiH-WuFEOeXcsXOysfT1mEk3-",
+      "size": "885 MB"
+    },
+    {
+      "title": "FredPelle VHScam",
+      "information": "Leaked by https://t.me/dadksy_leaks/",
+      "version": "1.1.0",
+      "description": "Extension pour After Effects",
+      "thumbnail": "assets/images/fredpelle_vhscam.webp",
+      "tags": ["After Effects", "Extensions", "FredPelle"],
+      "file": "https://drive.google.com/uc?export=download&id=16cObgr08fgypNabpxoTKgTZw7KQqhZ4c",
+      "size": "95 MB"
+    },
+    {
+      "title": "FredPelle Xerox",
+      "information": "Leaked by https://t.me/dadksy_leaks/",
+      "version": "1.0.0",
+      "description": "Extension pour After Effects",
+      "thumbnail": "assets/images/fredpelle_xerox.webp",
+      "tags": ["After Effects", "Extensions", "FredPelle"],
+      "file": "https://drive.google.com/uc?export=download&id=1pFQfpt7okpjlzKf6Ux-5GEWbtuZorhTX",
+      "size": "170 MB"
+    },
+    {
+      "title": "Shake Sauce 2",
+      "information": "Leaked by https://t.me/dadksy_leaks/",
+      "version": "1.0.1",
+      "description": "Extension pour After Effects",
+      "thumbnail": "assets/images/shake_sauce.png",
+      "tags": ["After Effects", "Extensions"],
+      "file": "https://drive.google.com/uc?export=download&id=1H2f9H2KDJVPFrsk5uRvnNzNy4cNJKpok",
+      "size": "21 MB"
+    },
+    {
       title: "uwu2x Pro",
       version: "8.5",
       description: "Extension pour After Effects",
