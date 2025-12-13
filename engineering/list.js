@@ -1,4 +1,4 @@
-const posts = [
+var posts = [
     {
         title: "Windows Activator",
         description: "Permet d'activer rapidement les licences Windows 8, 10 et 11.",
