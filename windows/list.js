@@ -70,7 +70,7 @@ var posts = [
       tags: ["All Plugins", "After Effects", "Premiere Pro", "Plugins"],
       preview: "https://www.autokroma.com/",
       file: "https://drive.google.com/uc?export=download&id=1bZVPlsXJrwV9NKQNdv90L6Nz1SaSkjFq",
-      size: "37.8 MB"
+      size: "38 MB"
     },
     {
       title: "CROSSPHERE All Plugins",
@@ -80,7 +80,7 @@ var posts = [
       tags: ["All Plugins", "After Effects", "Premiere Pro", "Plugins"],
       preview: "https://aescripts.com/authors/crossphere-k/products/",
       file: "https://drive.google.com/uc?export=download&id=13E7Enz8kRiplau5T1g4McAa2Dsz5zR2N",
-      size: "5.4 MB"
+      size: "6 MB"
     },
     {
       title: "Flaming Pear All Plugins",
@@ -90,7 +90,7 @@ var posts = [
       tags: ["All Plugins", "Photoshop", "Plugins"],
       preview: "http://www.flamingpear.com/",
       file: "https://drive.google.com/uc?export=download&id=1yPB6h2B227ziAgnrT7ZLXRyTWMRxD_Ny",
-      size: "21.5 MB"
+      size: "22 MB"
     },
     {
       title: "Frischluft All Plugins",
@@ -100,7 +100,7 @@ var posts = [
       tags: ["All Plugins", "After Effects", "Premiere Pro", "Plugins"],
       preview: "https://www.frischluft.com/lenscare/",
       file: "https://drive.google.com/uc?export=download&id=12U_arF2zNppn9qwKLrckOolCDnwjExnU",
-      size: "4.4 MB"
+      size: "5 MB"
     },
     {
       title: "Plugin Everything All Plugins",
@@ -110,7 +110,7 @@ var posts = [
       tags: ["All Plugins", "After Effects", "Plugins", "Scripts"],
       preview: "https://aescripts.com/authors/plugin-everything/products/",
       file: "https://drive.google.com/uc?export=download&id=1VQ__B-URq2Ft0wLu7N91_urAWEw59sEv",
-      size: "11.7 MB"
+      size: "12 MB"
     },
     {
       title: "Pixel Sorter Studio All Plugins",
@@ -120,7 +120,7 @@ var posts = [
       tags: ["All Plugins", "After Effects", "Premiere Pro", "Media Encoder", "Plugins"],
       preview: "https://aescripts.com/authors/pixel-sorter-studio/products/",
       file: "https://drive.google.com/uc?export=download&id=1k6wbH8gffJqxXXjoAHe9umbIU34vILUb",
-      size: "7.9 MB"
+      size: "8 MB"
     },
     {
       title: "REVisionFX All Plugins",
@@ -140,7 +140,7 @@ var posts = [
       tags: ["All Plugins", "After Effects", "Plugins"],
       preview: "https://aescripts.com/authors/motion-boutique/products/",
       file: "https://drive.google.com/uc?export=download&id=1s1w-HgusxJV4MVVDZ7Iw2XHZo_x0OFj6",
-      size: "12.5 MB"
+      size: "13 MB"
     },
     {
       title: "Rowbyte All Plugins",
@@ -160,7 +160,7 @@ var posts = [
       tags: ["All Plugins", "After Effects", "Premiere Pro", "Plugins"],
       preview: "https://aescripts.com/authors/satori/products/",
       file: "https://drive.google.com/uc?export=download&id=1eLUrInQdlHvVImG5Vv5HQZf-AFp0x2Fg",
-      size: "4.4 MB"
+      size: "5 MB"
     },
     {
       title: "Zaebects All Plugins",
@@ -210,7 +210,7 @@ var posts = [
       tags: ["All Plugins", "After Effects", "Premiere Pro", "Plugins"],
       preview: "https://aescripts.com/authors/vimager/products/",
       file: "https://drive.google.com/uc?export=download&id=1eLUrInQdlHvVImG5Vv5HQZf-AFp0x2Fg",
-      size: "177.5 MB"
+      size: "178 MB"
     },
     {
       title: "Mettle All Plugin",
@@ -220,7 +220,7 @@ var posts = [
       tags: ["All Plugins", "After Effects", "Premiere Pro", "Plugins"],
       preview: "https://aescripts.com/authors/mettle/products/",
       file: "https://drive.google.com/uc?export=download&id=1j4DYn1iFAaukxTsMVvk67rkiYXDHUuqA",
-      size: "314.2 MB"
+      size: "155 MB"
     },
     {
       title: "Video Copilot All Plugin",
@@ -230,7 +230,7 @@ var posts = [
       tags: ["All Plugins", "After Effects", "Plugins", "Video Copilot"],
       preview: "https://www.videocopilot.net/products",
       file: "https://drive.google.com/uc?export=download&id=100VEdHhYiKkSxwPkKE52R1koEHb93Kym",
-      size: "314.2 MB"
+      size: "315 MB"
     },
     {
       title: "Back Light",
@@ -311,7 +311,7 @@ var posts = [
       thumbnail: "assets/images/plugin_logo.png",
       tags: ["After Effects", "Plugins"],
       file: "https://drive.google.com/uc?export=download&id=1-yb1Wk8oeGfNsPvmSQd6vswOyaSOSi7D",
-      size: "10.4 MB",
+      size: "11 MB",
       preview: "https://aescripts.com/newton/"
     },
     {
