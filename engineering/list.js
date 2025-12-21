@@ -225,13 +225,13 @@ var posts = [
         size: "37 MB"
     },
     {
-        title: "Binary Ninja",
+        title: "Binary Ninja Personal",
         description: "Désassembleur moderne et outil d'analyse binaire.",
         version: "5.1",
         thumbnail: "assets/images/binaryninja_logo.png",
         tags: ["Reverse Engineering", "Disassembler"],
-        file: "https://drive.google.com/uc?export=download&id=1wrVAwDp6SJQU4WnvFMzVd3MAKDf5B0Vj",
-        size: "285 MB"
+        file: "https://drive.google.com/uc?export=download&id=1a16MNIGO85Fi4zbO-zKjWKTAyxKQV-U1",
+        size: "396 MB"
     },
     {
         title: "QEMU",
