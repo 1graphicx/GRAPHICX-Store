@@ -209,7 +209,7 @@ var posts = [
       thumbnail: "assets/images/all_plugins_logo.png",
       tags: ["All Plugins", "After Effects", "Premiere Pro", "Plugins"],
       preview: "https://aescripts.com/authors/vimager/products/",
-      file: "https://drive.google.com/uc?export=download&id=1eLUrInQdlHvVImG5Vv5HQZf-AFp0x2Fg",
+      file: "https://drive.google.com/uc?export=download&id=156NegqOdJDs0e3IDWMwTyFdHVJZ-oqJb",
       size: "178 MB"
     },
     {
