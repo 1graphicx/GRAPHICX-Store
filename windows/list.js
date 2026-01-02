@@ -1,9 +1,9 @@
 var posts = [
     {
       title: "Maxon Red Giant",
-      description: "Magic Bullet Looks, VFX Suite, Trapcode, Particular",
-      version: "2025.6.0",
-      thumbnail: "assets/images/maxon_logo.jpg",
+      description: "Magic Bullet Looks, VFX Suite, Trapcode, Particular, Trapcode",
+      version: "2026.2.1",
+      thumbnail: "assets/images/maxon_logo.png",
       tags: ["Maxon", "After Effects", "Plugins"],
       preview: "https://www.maxon.net/red-giant",
       file: "https://drive.google.com/uc?export=download&id=1UVPSIhUzx5iyukoShjbDJMsB4kUR5M-o",
@@ -12,8 +12,8 @@ var posts = [
     {
       title: "Maxon Universe",
       description: "Complémentaire à Maxon Red Giant",
-      version: "2025.3.3",
-      thumbnail: "assets/images/maxon_logo.jpg",
+      version: "2026.0.1",
+      thumbnail: "assets/images/maxon_logo.png",
       tags: ["Maxon", "After Effects", "Plugins"],
       preview: "https://www.maxon.net/red-giant/universe",
       file: "https://drive.google.com/uc?export=download&id=1lAy0OwfFBXNDUJIyLWL92IC67X_P1hpQ",
@@ -22,18 +22,18 @@ var posts = [
     {
       title: "Maxon Cinema 4D",
       description: "Logiciel de 3D développé par Maxon",
-      version: "2025.3.3",
-      thumbnail: "assets/images/maxon_logo.jpg",
+      version: "2026.1.0",
+      thumbnail: "assets/images/maxon_logo.png",
       tags: ["Maxon", "After Effects", "Plugins"],
       preview: "https://www.maxon.net/cinema-4d",
       file: "https://drive.google.com/uc?export=download&id=1KzO_yHew0RX2CsHxTDSAZg5k4JbZc5sn",
       size: "976 MB"
     },
     {
-      title: "Boris FX Continuum 2025.5",
+      title: "Boris FX Continuum AE PR",
       information: "Crack by Team V.R https://codec.kyiv.ua/ad0be.html",
       description: "BCC Continuum",
-      version: "18.5.0",
+      version: "2026",
       thumbnail: "assets/images/borisfx_logo.png",
       tags: ["Boris FX", "After Effects", "Premiere Pro", "Plugins"],
       preview: "https://borisfx.com/products/continuum/",
@@ -41,10 +41,10 @@ var posts = [
       size: "1.7 GB"
     },
     {
-      title: "Boris FX Mocha Pro 2025.5",
+      title: "Boris FX Mocha Pro AE PR",
       description: "Rotobrush et tracing avancé",
       information: "Crack by Team V.R https://codec.kyiv.ua/ad0be.html",
-      version: "12.5.0",
+      version: "2026",
       thumbnail: "assets/images/borisfx_logo.png",
       tags: ["Boris FX", "After Effects", "Premiere Pro", "Plugins"],
       preview: "https://borisfx.com/products/mocha-pro/",
@@ -52,12 +52,23 @@ var posts = [
       size: "988 MB"
     },
     {
-      title: "Boris FX Sapphire 2025.5",
+      title: "Boris FX Sapphire AE PR",
       information: "Crack by Team V.R https://codec.kyiv.ua/ad0be.html",
       description: "Plugins essentiels aux edits",
-      version: "18.51",
+      version: "2026",
       thumbnail: "assets/images/borisfx_logo.png",
       tags: ["Boris FX", "After Effects", "Premiere Pro", "Plugins"],
+      preview: "https://borisfx.com/products/sapphire/",
+      file: "https://drive.google.com/uc?export=download&id=1veItqodWqneRhWRKuvv6l8qTEd8YzEMw",
+      size: "1.1 GB"
+    },
+    {
+      title: "Boris FX Sapphire PS",
+      information: "Crack by Team V.R https://codec.kyiv.ua/ad0be.html",
+      description: "Plugins essentiels aux edits",
+      version: "2026",
+      thumbnail: "assets/images/borisfx_logo.png",
+      tags: ["Boris FX", "Photoshop", "Plugins"],
       preview: "https://borisfx.com/products/sapphire/",
       file: "https://drive.google.com/uc?export=download&id=1veItqodWqneRhWRKuvv6l8qTEd8YzEMw",
       size: "1.1 GB"
@@ -70,7 +81,7 @@ var posts = [
       tags: ["All Plugins", "After Effects", "Premiere Pro", "Plugins"],
       preview: "https://www.autokroma.com/",
       file: "https://drive.google.com/uc?export=download&id=1bZVPlsXJrwV9NKQNdv90L6Nz1SaSkjFq",
-      size: "38 MB"
+      size: "37.8 MB"
     },
     {
       title: "CROSSPHERE All Plugins",
@@ -80,7 +91,7 @@ var posts = [
       tags: ["All Plugins", "After Effects", "Premiere Pro", "Plugins"],
       preview: "https://aescripts.com/authors/crossphere-k/products/",
       file: "https://drive.google.com/uc?export=download&id=13E7Enz8kRiplau5T1g4McAa2Dsz5zR2N",
-      size: "6 MB"
+      size: "5.4 MB"
     },
     {
       title: "Flaming Pear All Plugins",
@@ -90,7 +101,7 @@ var posts = [
       tags: ["All Plugins", "Photoshop", "Plugins"],
       preview: "http://www.flamingpear.com/",
       file: "https://drive.google.com/uc?export=download&id=1yPB6h2B227ziAgnrT7ZLXRyTWMRxD_Ny",
-      size: "22 MB"
+      size: "21.5 MB"
     },
     {
       title: "Frischluft All Plugins",
@@ -100,7 +111,7 @@ var posts = [
       tags: ["All Plugins", "After Effects", "Premiere Pro", "Plugins"],
       preview: "https://www.frischluft.com/lenscare/",
       file: "https://drive.google.com/uc?export=download&id=12U_arF2zNppn9qwKLrckOolCDnwjExnU",
-      size: "5 MB"
+      size: "4.4 MB"
     },
     {
       title: "Plugin Everything All Plugins",
@@ -110,7 +121,7 @@ var posts = [
       tags: ["All Plugins", "After Effects", "Plugins", "Scripts"],
       preview: "https://aescripts.com/authors/plugin-everything/products/",
       file: "https://drive.google.com/uc?export=download&id=1VQ__B-URq2Ft0wLu7N91_urAWEw59sEv",
-      size: "12 MB"
+      size: "11.7 MB"
     },
     {
       title: "Pixel Sorter Studio All Plugins",
@@ -120,7 +131,7 @@ var posts = [
       tags: ["All Plugins", "After Effects", "Premiere Pro", "Media Encoder", "Plugins"],
       preview: "https://aescripts.com/authors/pixel-sorter-studio/products/",
       file: "https://drive.google.com/uc?export=download&id=1k6wbH8gffJqxXXjoAHe9umbIU34vILUb",
-      size: "8 MB"
+      size: "7.9 MB"
     },
     {
       title: "REVisionFX All Plugins",
@@ -129,7 +140,7 @@ var posts = [
       thumbnail: "assets/images/all_plugins_logo.png",
       tags: ["All Plugins", "After Effects", "Premiere Pro", "Plugins"],
       preview: "https://revisionfx.com/products/for/after-effects/",
-      file: "https://drive.google.com/uc?export=download&id=1nVAO_9vFoBxP1BkQLNxPIUQLpNrzvlQe",
+      file: "https://drive.google.com/uc?export=download&id=10dnRz_Elsu-FFAYIfEgebN0IDHltgKF-",
       size: "243 MB"
     },
     {
@@ -140,7 +151,7 @@ var posts = [
       tags: ["All Plugins", "After Effects", "Plugins"],
       preview: "https://aescripts.com/authors/motion-boutique/products/",
       file: "https://drive.google.com/uc?export=download&id=1s1w-HgusxJV4MVVDZ7Iw2XHZo_x0OFj6",
-      size: "13 MB"
+      size: "12.5 MB"
     },
     {
       title: "Rowbyte All Plugins",
@@ -160,7 +171,7 @@ var posts = [
       tags: ["All Plugins", "After Effects", "Premiere Pro", "Plugins"],
       preview: "https://aescripts.com/authors/satori/products/",
       file: "https://drive.google.com/uc?export=download&id=1eLUrInQdlHvVImG5Vv5HQZf-AFp0x2Fg",
-      size: "5 MB"
+      size: "4.4 MB"
     },
     {
       title: "Zaebects All Plugins",
@@ -199,7 +210,7 @@ var posts = [
       thumbnail: "assets/images/all_plugins_logo.png",
       tags: ["All Plugins", "After Effects", "Premiere Pro", "Plugins"],
       preview: "https://www.filmconvert.com/",
-      file: "https://drive.google.com/uc?export=download&id=16HOMJhG1zCbJO7XeOa9Dw_FQzLyxQGgf",
+      file: "https://drive.google.com/uc?export=download&id=1cX5aKFaqoHtgXPuMBSqzDGmUmwegg1SN",
       size: "776 MB"
     },
     {
@@ -209,8 +220,8 @@ var posts = [
       thumbnail: "assets/images/all_plugins_logo.png",
       tags: ["All Plugins", "After Effects", "Premiere Pro", "Plugins"],
       preview: "https://aescripts.com/authors/vimager/products/",
-      file: "https://drive.google.com/uc?export=download&id=156NegqOdJDs0e3IDWMwTyFdHVJZ-oqJb",
-      size: "178 MB"
+      file: "https://drive.google.com/uc?export=download&id=1eLUrInQdlHvVImG5Vv5HQZf-AFp0x2Fg",
+      size: "177.5 MB"
     },
     {
       title: "Mettle All Plugin",
@@ -220,7 +231,7 @@ var posts = [
       tags: ["All Plugins", "After Effects", "Premiere Pro", "Plugins"],
       preview: "https://aescripts.com/authors/mettle/products/",
       file: "https://drive.google.com/uc?export=download&id=1j4DYn1iFAaukxTsMVvk67rkiYXDHUuqA",
-      size: "155 MB"
+      size: "314.2 MB"
     },
     {
       title: "Video Copilot All Plugin",
@@ -230,12 +241,12 @@ var posts = [
       tags: ["All Plugins", "After Effects", "Plugins", "Video Copilot"],
       preview: "https://www.videocopilot.net/products",
       file: "https://drive.google.com/uc?export=download&id=100VEdHhYiKkSxwPkKE52R1koEHb93Kym",
-      size: "315 MB"
+      size: "314.2 MB"
     },
     {
       title: "Back Light",
       description: "Pack pour Element 3D",
-      thumbnail: "assets/images/extension_logo.png",
+      thumbnail: "assets/images/video_copilot_logo.png",
       tags: ["Video Copilot"],
       preview: "https://www.videocopilot.net/products/element2#backlight",
       file: "https://drive.google.com/uc?export=download&id=13GacSI_50UxF0hY2gD-BKrzf6u7ECh6F",
@@ -244,7 +255,7 @@ var posts = [
     {
       title: "Fresh Food",
       description: "Pack pour Element 3D",
-      thumbnail: "assets/images/extension_logo.png",
+      thumbnail: "assets/images/video_copilot_logo.png",
       tags: ["Video Copilot"],
       preview: "https://www.videocopilot.net/products/3d/freshfoodpack",
       file: "https://drive.usercontent.google.com/download?id=1hUFCgP5ATC2LiniyhKAJ4NECn6TnOW3z&export=download&authuser=0",
@@ -253,7 +264,7 @@ var posts = [
     {
       title: "Metropolitan",
       description: "Pack pour Element 3D",
-      thumbnail: "assets/images/extension_logo.png",
+      thumbnail: "assets/images/video_copilot_logo.png",
       tags: ["Video Copilot"],
       preview: "https://www.videocopilot.net/products/3d/metropolitan",
       file: "https://drive.usercontent.google.com/download?id=1lGW2-6ZBCRzTi8XWG5nxFhkIIN1tUNDf&export=download&authuser=0",
@@ -262,7 +273,7 @@ var posts = [
     {
       title: "Money Casino",
       description: "Pack pour Element 3D",
-      thumbnail: "assets/images/extension_logo.png",
+      thumbnail: "assets/images/video_copilot_logo.png",
       tags: ["Video Copilot"],
       preview: "https://www.videocopilot.net/products/3d/moneyandcasinopack",
       file: "https://drive.usercontent.google.com/download?id=1I-K1SA--_Hn_g_jLiRSyuOz4GubGLKhy&export=download&authuser=0",
@@ -271,7 +282,7 @@ var posts = [
     {
       title: "Motion Design 2",
       description: "Pack pour Element 3D",
-      thumbnail: "assets/images/extension_logo.png",
+      thumbnail: "assets/images/video_copilot_logo.png",
       tags: ["Video Copilot"],
       preview: "https://www.videocopilot.net/products/element2#motion-design-2",
       file: "https://drive.usercontent.google.com/download?id=1BXIqG14ImXXbqJu8kd4zyDUZ6VflMX-Z&export=download&authuser=0",
@@ -280,7 +291,7 @@ var posts = [
     {
       title: "Pro Shader 2",
       description: "Pack pour Element 3D",
-      thumbnail: "assets/images/extension_logo.png",
+      thumbnail: "assets/images/video_copilot_logo.png",
       tags: ["Video Copilot"],
       preview: "https://www.videocopilot.net/products/element2#pro-shaders-2",
       file: "https://drive.usercontent.google.com/download?id=1vYmHIfXi2DJHluf78yzKLeLdw9R9CLC7&export=download&authuser=0",
@@ -289,7 +300,7 @@ var posts = [
     {
       title: "Projectiles Weapons 3D",
       description: "Pack pour Element 3D",
-      thumbnail: "assets/images/extension_logo.png",
+      thumbnail: "assets/images/video_copilot_logo.png",
       tags: ["Video Copilot"],
       preview: "https://www.videocopilot.net/products/3d/projectileweapons",
       file: "https://drive.usercontent.google.com/download?id=1RDWm2qprZ8Fxvw2MOWf2iBYrdMx2jLXa&export=download&authuser=0",
@@ -298,7 +309,7 @@ var posts = [
     {
       title: "Sound Music 3D",
       description: "Pack pour Element 3D",
-      thumbnail: "assets/images/extension_logo.png",
+      thumbnail: "assets/images/video_copilot_logo.png",
       tags: ["Video Copilot"],
       preview: "https://www.videocopilot.net/products/3d/soundandmusicpack",
       file: "https://drive.usercontent.google.com/download?id=1rbv_X_Vw0_6hsF982GmA5FpHXaf_6ZKf&export=download&authuser=0",
@@ -311,12 +322,12 @@ var posts = [
       thumbnail: "assets/images/plugin_logo.png",
       tags: ["After Effects", "Plugins"],
       file: "https://drive.google.com/uc?export=download&id=1-yb1Wk8oeGfNsPvmSQd6vswOyaSOSi7D",
-      size: "11 MB",
+      size: "10.4 MB",
       preview: "https://aescripts.com/newton/"
     },
     {
       title: "Retro Dither",
-      version: "1.8",
+      version: "1.12",
       description: "Plugin pour After Effects",
       thumbnail: "assets/images/plugin_logo.png",
       tags: ["After Effects", "Plugins"],
@@ -336,33 +347,13 @@ var posts = [
     },
     {
       title: "Glitch 7in1",
-      version: "1.0.3",
+      version: "1.2.2",
       description: "Plugin pour After Effects",
       thumbnail: "assets/images/plugin_logo.png",
       tags: ["After Effects", "Plugins"],
       file: "https://drive.google.com/uc?export=download&id=1FyDUXx_dHxqi1pk4lNfJLUxBM31bwhKv",
       size: "317 KB",
       preview: "https://aesweets.com/glitch-7in1/"
-    },
-    {
-      title: "Pixel Sorter",
-      version: "3.1.0",
-      description: "Plugin pour After Effects et Premiere Pro",
-      thumbnail: "assets/images/plugin_logo.png",
-      tags: ["After Effects", "Premiere Pro", "Plugins"],
-      file: "https://drive.google.com/uc?export=download&id=1BsCE2nGq4Hr_K0ixmky_Nwf2_Aebzlez",
-      size: "349 KB",
-      preview: "https://aescripts.com/pixel-sorter/"
-    },
-    {
-      title: "Signal",
-      version: "1.2.3",
-      description: "Plugin pour After Effects",
-      thumbnail: "assets/images/plugin_logo.png",
-      tags: ["After Effects", "Plugins"],
-      file: "https://drive.google.com/uc?export=download&id=1f6lS893g_9-vATNXbbSDLTLuzgDYImUn",
-      size: "367 KB",
-      preview: "https://aescripts.com/signal/"
     },
     {
       title: "Polytrace",
@@ -506,7 +497,7 @@ var posts = [
       title: "AEViewer Pro 2",
       version: "2.2",
       description: "Extension pour After Effects et Premiere Pro",
-      thumbnail: "assets/images/extension_logo.png",
+      thumbnail: "assets/images/aeviewer_pro.png",
       tags: ["After Effects", "Premiere Pro", "Extensions"],
       file: "https://drive.google.com/uc?export=download&id=1cYjR0vno4lneRjQezjiW6EGki8yxRt1s",
       size: "103 MB",
@@ -688,7 +679,7 @@ var posts = [
       "information": "Leaked by https://t.me/dadksy_leaks/",
       "version": "1.0.0",
       "description": "Extension pour Premiere Pro",
-      "thumbnail": "assets/images/extension_logo.png",
+      "thumbnail": "assets/images/fastfx.png",
       "tags": ["Premiere Pro", "Extensions"],
       "file": "https://drive.google.com/uc?export=download&id=1Zyfz_eGWx8nqzd9wLkKZF1EOjY-M6lBh",
       "size": "155 MB",
@@ -699,7 +690,7 @@ var posts = [
       "information": "Leaked by https://t.me/dadksy_leaks/",
       "version": "1.0.0",
       "description": "Extension pour After Effects et Premiere Pro",
-      "thumbnail": "assets/images/fredpelle_halation.webp",
+      "thumbnail": "assets/images/fredpelle_halation.png",
       "tags": ["After Effects", "Premiere Pro", "Extensions", "FredPelle"],
       "file": "https://drive.google.com/uc?export=download&id=1FRA29ZiJJDLMsRtaoH3ZwkjO7wkvZzT_",
       "size": "8.8 MB",
@@ -709,7 +700,7 @@ var posts = [
       "title": "FredPelle LoFi",
       "version": "1.0.0",
       "description": "Extension pour After Effects",
-      "thumbnail": "assets/images/fredpelle_lofi.webp",
+      "thumbnail": "assets/images/fredpelle_lofi.png",
       "tags": ["After Effects", "Extensions", "FredPelle"],
       "file": "https://drive.google.com/uc?export=download&id=1jt9D_RK7YDlEFFsELn5YPxNre_cQjK3g",
       "size": "78 MB",
@@ -720,7 +711,7 @@ var posts = [
       "information": "Leaked by https://t.me/dadksy_leaks/",
       "version": "1.0.0",
       "description": "Extension pour After Effects",
-      "thumbnail": "assets/images/fredpelle_matrix.webp",
+      "thumbnail": "assets/images/fredpelle_matrix.png",
       "tags": ["After Effects", "Extensions", "FredPelle"],
       "file": "https://drive.google.com/uc?export=download&id=1NfleQX41V1f-_7v5K41NWF6Q8nl5msyP",
       "size": "2.5 MB",
@@ -730,7 +721,7 @@ var posts = [
       "title": "FredPelle MXM",
       "version": "1.0.1",
       "description": "Extension pour After Effects",
-      "thumbnail": "assets/images/fredpelle_mxm.webp",
+      "thumbnail": "assets/images/fredpelle_mxm.png",
       "tags": ["After Effects", "Extensions", "FredPelle"],
       "file": "https://drive.google.com/uc?export=download&id=1WNRsYippJp6UidTwr_iWPjTGHDfWNapX",
       "size": "412 MB",
@@ -741,7 +732,7 @@ var posts = [
       "information": "Leaked by https://t.me/dadksy_leaks/",
       "version": "2.0.0",
       "description": "Extension pour After Effects",
-      "thumbnail": "assets/images/fredpelle_rollback8.webp",
+      "thumbnail": "assets/images/fredpelle_rollback8.png",
       "tags": ["After Effects", "Extensions", "FredPelle"],
       "file": "https://drive.google.com/uc?export=download&id=1qkz8GjwMFZq6rcbK4K8FMfq8e1ZtFLGf",
       "size": "826 MB",
@@ -752,7 +743,7 @@ var posts = [
       "information": "Leaked by https://t.me/dadksy_leaks/",
       "version": "1.0.2",
       "description": "Extension pour After Effects",
-      "thumbnail": "assets/images/fredpelle_spectrum.webp",
+      "thumbnail": "assets/images/fredpelle_spectrum.png",
       "tags": ["After Effects", "Extensions", "FredPelle"],
       "file": "https://drive.google.com/uc?export=download&id=1BQvMUKWAiH-WuFEOeXcsXOysfT1mEk3-",
       "size": "885 MB",
@@ -763,7 +754,7 @@ var posts = [
       "information": "Leaked by https://t.me/dadksy_leaks/",
       "version": "1.1.0",
       "description": "Extension pour After Effects",
-      "thumbnail": "assets/images/fredpelle_vhscam.webp",
+      "thumbnail": "assets/images/fredpelle_vhscam.png",
       "tags": ["After Effects", "Extensions", "FredPelle"],
       "file": "https://drive.google.com/uc?export=download&id=16cObgr08fgypNabpxoTKgTZw7KQqhZ4c",
       "size": "95 MB",
@@ -774,7 +765,7 @@ var posts = [
       "information": "Leaked by https://t.me/dadksy_leaks/",
       "version": "1.0.0",
       "description": "Extension pour After Effects",
-      "thumbnail": "assets/images/fredpelle_xerox.webp",
+      "thumbnail": "assets/images/fredpelle_xerox.png",
       "tags": ["After Effects", "Extensions", "FredPelle"],
       "file": "https://drive.google.com/uc?export=download&id=1pFQfpt7okpjlzKf6Ux-5GEWbtuZorhTX",
       "size": "170 MB",
@@ -795,7 +786,7 @@ var posts = [
       title: "uwu2x Pro",
       version: "8.5",
       description: "Extension pour After Effects",
-      thumbnail: "assets/images/extension_logo.png",
+      thumbnail: "assets/images/uwu2x_pro.png",
       tags: ["After Effects", "Extensions"],
       file: "https://drive.google.com/uc?export=download&id=1gkaa47pVoeC5ws6Sl0Lp2I_63vi5pYnd",
       size: "114 MB",
@@ -805,7 +796,7 @@ var posts = [
       title: "Move Anchor Point 4",
       version: "4.1.2",
       description: "Extension pour After Effects",
-      thumbnail: "assets/images/extension_logo.png",
+      thumbnail: "assets/images/move_anchor_point_4.png",
       tags: ["After Effects", "Extensions"],
       file: "https://drive.google.com/uc?export=download&id=1aX9h5m_t1QPX1m4eLGsdIVEZCZw0QRl0",
       size: "2.7 MB",
@@ -815,7 +806,7 @@ var posts = [
       title: "Shape Repeater Baker",
       version: "1.0",
       description: "Script pour After Effects",
-      thumbnail: "assets/images/script_logo.png",
+      thumbnail: "assets/images/shape_repeater_baker.png",
       tags: ["After Effects", "Scripts"],
       file: "https://drive.google.com/uc?export=download&id=1A6mGve-hwpJC2-fD_oYq-l7d_ddouBgV",
       size: "56 KB",
@@ -825,7 +816,7 @@ var posts = [
       title: "Swiss Knife",
       version: "1.2.0",
       description: "Script pour After Effects",
-      thumbnail: "assets/images/script_logo.png",
+      thumbnail: "assets/images/swiss_knife.png",
       tags: ["After Effects", "Scripts"],
       file: "https://drive.google.com/uc?export=download&id=1pGjgTYX1ZEgY8lWFfp2XyLxK7lGNu4in",
       size: "1 MB",
@@ -835,7 +826,7 @@ var posts = [
       title: "Spiral Maker",
       version: "1.0.1",
       description: "Script pour After Effects",
-      thumbnail: "assets/images/script_logo.png",
+      thumbnail: "assets/images/spiral_maker.png",
       tags: ["After Effects", "Scripts"],
       file: "https://drive.google.com/uc?export=download&id=1w9QEB-M30ASetHn7gYvZArgwdG5wWOvl",
       size: "490 KB",
@@ -846,7 +837,7 @@ var posts = [
       information: "Mot de passe : GRAPHICX",
       version: "1.4",
       description: "Script pour After Effects",
-      thumbnail: "assets/images/script_logo.png",
+      thumbnail: "assets/images/gg_bunkai.png",
       tags: ["After Effects", "Scripts"],
       file: "https://drive.google.com/uc?export=download&id=1Ha9rnv9Ws4rcGBibnMqgJcUrG00wIiUF",
       size: "58 KB",
@@ -1126,7 +1117,7 @@ var posts = [
       information: "Mot de passe : GRAPHICX",
       description: "Logiciel de la suite JangaFX",
       version: "1.2.1",
-      thumbnail: "assets/images/janga_fx_logo.ico",
+      thumbnail: "assets/images/janga_fx_embergen.png",
       tags: ["Software", "JangaFX"],
       file: "https://drive.google.com/uc?export=download&id=1aC5M1w9Jw9_foGQ-SLJEq-3Y5IOzz6IM",
       size: "83.3 MB",
@@ -1137,7 +1128,7 @@ var posts = [
       information: "Mot de passe : GRAPHICX",
       description: "Logiciel de la suite JangaFX",
       version: "1.04.1",
-      thumbnail: "assets/images/janga_fx_logo.ico",
+      thumbnail: "assets/images/janga_fx_vectoraygen.png",
       tags: ["Software", "JangaFX"],
       file: "https://drive.google.com/uc?export=download&id=1DLq3G9PLe5hii4PJgivHSH7HC5zR3wB8",
       size: "2.7 MB",
@@ -1148,7 +1139,7 @@ var posts = [
       information: "Mot de passe : GRAPHICX",
       description: "Logiciel de la suite JangaFX",
       version: "0.3.1",
-      thumbnail: "assets/images/janga_fx_logo.ico",
+      thumbnail: "assets/images/janga_fx_geogen.png",
       tags: ["Software", "JangaFX"],
       file: "https://drive.google.com/uc?export=download&id=1z0oMJ4Y2VXcrYvnbTQRcmU2yT0Ge0qEd",
       size: "137.2 MB",
@@ -1159,7 +1150,7 @@ var posts = [
       information: "Mot de passe : GRAPHICX",
       description: "Logiciel de la suite JangaFX",
       version: "0.3.0",
-      thumbnail: "assets/images/janga_fx_logo.ico",
+      thumbnail: "assets/images/janga_fx_liquidGen.png",
       tags: ["Software", "JangaFX"],
       file: "https://drive.google.com/uc?export=download&id=1Cc9iyVNSKE8y8hNCH_s7jQ_sNz4EIWxO",
       size: "43.3 MB",
@@ -1169,7 +1160,7 @@ var posts = [
       title: "Topaz Video AI 7",
       description: "Logiciel d'amélioration de qualité par IA",
       version: "7.0.2",
-      thumbnail: "https://sm.pcmag.com/pcmag_au/review/t/topaz-phot/topaz-photo-ai_qan9.jpg",
+      thumbnail: "assets/images/topaz_video.png",
       tags: ["Software", "Topaz"],
       file: "https://drive.google.com/uc?export=download&id=17WQdaPHZeUD98qihfME7LlGT852ZYv6p",
       size: "334 MB",
@@ -1179,7 +1170,7 @@ var posts = [
       title: "Topaz Photo AI 4",
       description: "Logiciel d'amélioration de qualité par IA",
       version: "4.0.2",
-      thumbnail: "https://sm.pcmag.com/pcmag_au/review/t/topaz-phot/topaz-photo-ai_qan9.jpg",
+      thumbnail: "assets/images/topaz_photo.png",
       tags: ["Software", "Topaz"],
       file: "https://drive.google.com/uc?export=download&id=1W7M5COvQamJfa19v4mmx5c_BD_aG6u15",
       size: "863 MB",
@@ -1189,7 +1180,7 @@ var posts = [
       title: "Topaz Gigapixel AI 8",
       description: "Logiciel d'amélioration de qualité par IA",
       version: "8.4.2",
-      thumbnail: "https://sm.pcmag.com/pcmag_au/review/t/topaz-phot/topaz-photo-ai_qan9.jpg",
+      thumbnail: "assets/images/topaz_gigapixel.png",
       tags: ["Software", "Topaz"],
       file: "https://drive.google.com/uc?export=download&id=1T3cz3U39vUkhb0u05CXCvoZ-JcH1zJnX",
       size: "361 MB",
@@ -1199,7 +1190,7 @@ var posts = [
       title: "Topaz Video Enhance AI 2",
       description: "Logiciel d'amélioration de qualité par IA",
       version: "2.6.4",
-      thumbnail: "https://sm.pcmag.com/pcmag_au/review/t/topaz-phot/topaz-photo-ai_qan9.jpg",
+      thumbnail: "assets/images/topaz_video_enhance.png",
       tags: ["Software", "Topaz"],
       file: "https://drive.google.com/uc?export=download&id=1Bqeq9zXq8i6CBDN8RHInJ9HdbUQ4xGbZ",
       size: "217 MB",
@@ -1210,7 +1201,7 @@ var posts = [
     "description": "Téléchargez des vidéos depuis YouTube et d'autres plateformes en qualité 4K et au-delà.",
     "information": "Mettez à jour quand c'est demandé",
     "version": "1.10.5",
-    "thumbnail": "assets/images/4k_download_logo.png",
+    "thumbnail": "assets/images/4k_video_downloader.png",
     "tags": ["Software", "4K Download"],
     "file": "https://drive.google.com/uc?export=download&id=1ktkJtKaPiOdXdGg3m3G8p52WQUz9QTAH",
     "size": "525 KB",
@@ -1221,7 +1212,7 @@ var posts = [
     "description": "Convertissez rapidement les vidéos YouTube en fichiers audio MP3 de haute qualité.",
     "information": "Mettez à jour quand c'est demandé",
     "version": "5.7.5",
-    "thumbnail": "assets/images/4k_download_logo.png",
+    "thumbnail": "assets/images/4k_youtube_to_mp3.png",
     "tags": ["Software", "4K Download"],
     "file": "https://drive.google.com/uc?export=download&id=1aFY69MxwzgoFaPW6KW2PM2bJ23b6dXAG",
     "size": "523 KB",
@@ -1232,7 +1223,7 @@ var posts = [
     "description": "Extrayez l'audio de vidéos MP4 en toute simplicité pour obtenir des fichiers MP3.",
     "information": "Mettez à jour quand c'est demandé",
     "version": "3.0.1",
-    "thumbnail": "assets/images/4k_download_logo.png",
+    "thumbnail": "assets/images/4k_video_to_mp3.png",
     "tags": ["Software", "4K Download"],
     "file": "https://drive.google.com/uc?export=download&id=1d53Fo2v5s0UZNi333sBQLwoSJQUQE3Ly",
     "size": "555 KB",
@@ -1243,7 +1234,7 @@ var posts = [
     "description": "Réduisez la taille de vos images tout en conservant leur qualité d'origine.",
     "information": "Mettez à jour quand c'est demandé",
     "version": "1.5.0",
-    "thumbnail": "assets/images/4k_download_logo.png",
+    "thumbnail": "assets/images/4k_image_compressor.png",
     "tags": ["Software", "4K Download"],
     "file": "https://drive.google.com/uc?export=download&id=1dqIG-rP_-v3k9Kk-CLWhFtgAHkb7dQDz",
     "size": "571 KB",
@@ -1254,7 +1245,7 @@ var posts = [
     "description": "Créez facilement des diaporamas photo animés en haute définition avec musique et effets.",
     "information": "Mettez à jour quand c'est demandé",
     "version": "2.0.1",
-    "thumbnail": "assets/images/4k_download_logo.png",
+    "thumbnail": "assets/images/4k_slideshow_maker.png",
     "tags": ["Software", "4K Download"],
     "file": "https://drive.google.com/uc?export=download&id=1t6w1sF6mAtiuhwS0Z8SrrOfB0ZsTKOpw",
     "size": "545 KB",
@@ -1265,7 +1256,7 @@ var posts = [
     "description": "Téléchargez automatiquement photos, vidéos et stories depuis des comptes Instagram publics.",
     "information": "Mettez à jour quand c'est demandé",
     "version": "4.9.0",
-    "thumbnail": "assets/images/4k_download_logo.png",
+    "thumbnail": "assets/images/4k_stogram.png",
     "tags": ["Software", "4K Download"],
     "file": "https://drive.google.com/uc?export=download&id=12KDtWgwXyvzb8nCbqcmCvPDkVYJ1lYsv",
     "size": "460 KB",
@@ -1276,61 +1267,10 @@ var posts = [
     "description": "Sauvegardez facilement des vidéos TikTok, hashtags, comptes ou playlists en un clic.",
     "information": "Mettez à jour quand c'est demandé",
     "version": "2.7.4",
-    "thumbnail": "assets/images/4k_download_logo.png",
+    "thumbnail": "assets/images/4k_tokkit.png",
     "tags": ["Software", "4K Download"],
     "file": "https://drive.google.com/uc?export=download&id=1r97UEbRmlQG_Pjk_XG1mk_3B92yzxjtL",
     "size": "484 KB",
     "preview": "https://www.4kdownload.com/products/tokkit/4"
-    },
-    {
-    title: "Avira Phantom VPN Pro",
-    information: "Mot de passe : GRAPHICX",
-    description: "Un VPN gratuit qui marche",
-    version: "2.44",
-    thumbnail: "assets/images/avira_logo.png",
-    tags: ["Software", "VPN"],
-    file: "https://drive.google.com/uc?export=download&id=1E-_OldG1jbnJgnnFvRCqmKKPl_YGSPLO",
-    size: "5 MB",
-    preview: "https://www.avira.com/vpn-pro"
-    },
-    {
-    title: "Windows Activator",
-    description: "Activer la licence windows ",
-    version: "8 v10 v11",
-    thumbnail: "assets/images/windows_logo.png",
-    tags: ["Windows"],
-    file: "https://drive.google.com/uc?export=download&id=1aPJYoPgPy9cdD142CiustuiMhdnQLePU",
-    size: "51 KB",
-    preview: "https://massgrave.dev/"
-    },
-    {
-    title: "Winrar Premium",
-    description: "Vous n'aurez plus la fenêtre de licence parfois relou :)",
-    version: ". Last",
-    thumbnail: "assets/images/winrar_logo.png",
-    tags: ["Software"],
-    file: "https://drive.google.com/uc?export=download&id=1BMig6y78Fkx6tTnhD-fXgcshVMtX_Xoc",
-    size: "1.8 MB",
-    preview: "https://www.win-rar.com/"
-    },
-    {
-    title: "Lock Hunter",
-    description: "Débloquer des fichiers bloqués par un processus en cours",
-    version: ". Last",
-    thumbnail: "assets/images/lockhunter_logo.png",
-    tags: ["Software"],
-    file: "https://lockhunter.com/startdownload.htm?imm&v=&t=",
-    size: "3.2 MB",
-    preview: "https://lockhunter.com/"
-    },
-    {
-    title: "SweetScape 010 Editor",
-    description: " Éditeur hexadécimal professionnel très puissant",
-    version: "15.0.2",
-    thumbnail: "assets/images/010editor_logo.png",
-    tags: ["Software"],
-    file: "https://drive.usercontent.google.com/download?id=1OcKWObWy0FjwH8zMJlWPXj3VN4tauFj_&export=download&authuser=0",
-    size: "34 MB",
-    preview: "https://www.sweetscape.com/download/010editor/"
     }
 ];
