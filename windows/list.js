@@ -140,7 +140,7 @@ var posts = [
       thumbnail: "assets/images/all_plugins_logo.png",
       tags: ["All Plugins", "After Effects", "Premiere Pro", "Plugins"],
       preview: "https://revisionfx.com/products/for/after-effects/",
-      file: "https://drive.google.com/uc?export=download&id=10dnRz_Elsu-FFAYIfEgebN0IDHltgKF-",
+      file: "https://drive.google.com/uc?export=download&id=1nVAO_9vFoBxP1BkQLNxPIUQLpNrzvlQe",
       size: "243 MB"
     },
     {
