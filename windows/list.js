@@ -210,7 +210,7 @@ var posts = [
       thumbnail: "assets/images/all_plugins_logo.png",
       tags: ["All Plugins", "After Effects", "Premiere Pro", "Plugins"],
       preview: "https://www.filmconvert.com/",
-      file: "https://drive.google.com/uc?export=download&id=1cX5aKFaqoHtgXPuMBSqzDGmUmwegg1SN",
+      file: "https://drive.google.com/uc?export=download&id=16HOMJhG1zCbJO7XeOa9Dw_FQzLyxQGgf",
       size: "776 MB"
     },
     {
