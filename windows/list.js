@@ -600,8 +600,8 @@ var posts = [
       description: "Extension pour After Effects",
       thumbnail: "assets/images/extension_logo.png",
       tags: ["After Effects", "Extensions"],
-      file: "https://drive.google.com/uc?export=download&id=1ERk0vax-NtS1J-JMu-px2JauHiix7kDQ",
-      size: "36 MB",
+      file: "https://drive.google.com/uc?export=download&id=1Qc4TGwTsQjRyUaYWAP_3coYJuoU542DI",
+      size: "42.5 MB",
       preview: "https://jry-media.store/pages/jerryflow-v2"
     },
     {
