@@ -596,7 +596,7 @@ var posts = [
     {
       title: "JerryFlow V2",
       information: "Mot de passe : GRAPHICX",
-      version: "2.0.1",
+      version: "2.3.1",
       description: "Extension pour After Effects",
       thumbnail: "assets/images/extension_logo.png",
       tags: ["After Effects", "Extensions"],
