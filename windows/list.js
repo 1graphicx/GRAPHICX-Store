@@ -598,7 +598,7 @@ var posts = [
       information: "Mot de passe : GRAPHICX",
       version: "2.3.1",
       description: "Extension pour After Effects",
-      thumbnail: "assets/images/extension_logo.png",
+      thumbnail: "assets/images/JerryFlowV2.png",
       tags: ["After Effects", "Extensions"],
       file: "https://drive.google.com/uc?export=download&id=1Qc4TGwTsQjRyUaYWAP_3coYJuoU542DI",
       size: "42.5 MB",
