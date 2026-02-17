@@ -928,7 +928,7 @@ var posts = [
       description: "Script pour After Effects",
       thumbnail: "assets/images/script_logo.png",
       tags: ["After Effects", "Scripts"],
-      file: "https://drive.google.com/uc?export=download&id=1mcm65E9Hpta3wWAhBtbyefCmVLZiurj5",
+      file: "https://drive.google.com/uc?export=download&id=1MI9mpGcm-_nXf1M50Lzfs4eFNQ3KvYZ1",
       size: "61 KB",
       preview: "https://payhip.com/b/7RwpC"
     },
