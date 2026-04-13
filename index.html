@@ -112,7 +112,10 @@
       const wrapper = document.createElement('span');
       if (extraClasses) wrapper.className = extraClasses;
       wrapper.innerHTML = svg;
-      el.replaceWith(wrapper.firstChild || wrapper);
+      // Si des classes extra existent (ex: lcard-arrow, lcard-btn-ico…),
+      // on garde le wrapper pour qu'il porte ces classes (position, taille…).
+      // Sinon on insère directement le SVG.
+      el.replaceWith(extraClasses ? wrapper : (wrapper.firstChild || wrapper));
     });
   }
 
@@ -1223,6 +1226,8 @@
       align-items: center;
       gap: 9px;
       margin-bottom: 8px;
+      padding-right: 34px; /* réserve l'espace pour .lcard-arrow (22px + 14px offset) */
+      min-width: 0;
     }
 
     /* Flèche lien externe — positionnée en haut à droite de la card */
@@ -1249,6 +1254,7 @@
       line-height: 1.25; min-width: 0;
       overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
       letter-spacing: 0.2px;
+      flex: 1; /* prend tout l'espace disponible dans lcard-header */
     }
 
     .lcard-badges { display: flex; flex-wrap: wrap; gap: 3px; margin-bottom: 6px; pointer-events: none; }
@@ -3983,16 +3989,6 @@ const SECTIONS_DATA = [
     desc:    "Plateformes sélectionnées pour le streaming en version originale sous-titrée.",
     desc_en: "Curated platforms for streaming anime and movies in subtitled original version.",
     cards: [
-      {
-        href:  "https://www.crunchyroll.com/",
-        icon:  "fa-solid fa-torii-gate",
-        name:  "Crunchyroll",
-        badges: [
-          { color: "orange", text: "Officiel" },
-          { color: "blue",   text: "VOSTFR" },
-        ],
-        meta: "Plateforme officielle de simulcast légal",
-      },
       {
         href:  "https://nyaa.si/",
         icon:  "fa-solid fa-cat",
