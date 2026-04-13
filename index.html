@@ -17,6 +17,26 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css" crossorigin="anonymous" />
+  <script>
+    // Vérifie si Font Awesome est chargé, sinon charge un fallback
+    (function() {
+      var test = document.createElement('span');
+      test.className = 'fa-solid fa-check';
+      test.style.cssText = 'position:absolute;visibility:hidden';
+      document.head.appendChild(test);
+      window.addEventListener('load', function() {
+        var computed = window.getComputedStyle(test, ':before').content;
+        if (!computed || computed === 'none' || computed === '') {
+          var link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = 'https://use.fontawesome.com/releases/v6.5.1/css/all.css';
+          document.head.appendChild(link);
+        }
+        document.head.removeChild(test);
+      });
+    })();
+  </script>
 
   <style>
     /* ── VARIABLES ─────────────────────────────────────────────── */
@@ -3879,6 +3899,16 @@ const SECTIONS_DATA = [
     desc_en: "Curated platforms for streaming anime and movies in subtitled original version.",
     cards: [
       {
+        href:  "https://www.crunchyroll.com/",
+        icon:  "fa-solid fa-torii-gate",
+        name:  "Crunchyroll",
+        badges: [
+          { color: "orange", text: "Officiel" },
+          { color: "blue",   text: "VOSTFR" },
+        ],
+        meta: "Plateforme officielle de simulcast légal",
+      },
+      {
         href:  "https://nyaa.si/",
         icon:  "fa-solid fa-cat",
         name:  "Nyaa.si",
@@ -3887,6 +3917,26 @@ const SECTIONS_DATA = [
           { color: "blue",  text: "Torrent" },
         ],
         meta: "Tracker torrent dédié aux animes et mangas",
+      },
+      {
+        href:  "https://animepahe.ru/",
+        icon:  "fa-solid fa-torii-gate",
+        name:  "AnimePahe",
+        badges: [
+          { color: "blue",  text: "VOSTFR" },
+          { color: "green", icon: "fa-solid fa-bolt", text: "Rapide" },
+        ],
+        meta: "Streaming en mini-encode de haute qualité",
+      },
+      {
+        href:  "https://hianime.to/",
+        icon:  "fa-solid fa-torii-gate",
+        name:  "HiAnime",
+        badges: [
+          { color: "blue", text: "VO" },
+          { color: "blue", text: "Animes" },
+        ],
+        meta: "Large catalogue d'animes en version originale",
       },
       {
         href:  "https://animekai.to/",
